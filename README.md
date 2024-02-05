@@ -1,5 +1,7 @@
-# Notes and Tutorials Pertaining to Managing CI/CD Across an Organiation
+# Multiproject CI/CD
 
 TODO: Catchier name?
 
 # Acknowledgements 
+
+TODO: Fill out!
