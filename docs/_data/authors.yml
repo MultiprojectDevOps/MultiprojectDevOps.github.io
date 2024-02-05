@@ -1,0 +1,14 @@
+# Authors
+
+ryan_richard:
+  name             : "Ryan M. Richard"
+  avatar           : "/assets/ryan_m_richard.jpg"
+  bio              : >-
+                     Scientist and Adjunct Professor interested in quantum
+                     chemistry and computer science.
+  location         : "Ames, IA"
+  email            : "rrichard@ameslab.gov"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ryanmrichard"

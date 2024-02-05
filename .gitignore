@@ -1,0 +1,17 @@
+# Directory created by bundle install
+docs/vendor
+docs/_site
+
+# Virtual environment names
+venv/
+
+Gemfile.lock
+
+# LaTeX auxiliary files
+cv.aux
+cv.log
+cv.out
+cv.synctex.gz
+
+#VSCode Settings
+.vscode/
