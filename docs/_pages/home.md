@@ -11,9 +11,6 @@ header:
       url: /updates/
     - label: "Tutorials"
       url: /tutorials/
-excerpt: >-
-         Dedicated to making development and maintence of
-         multiproject CI/CD easier.
 gallery:
   - image_path: /_pages/assets/resources.png
     title: "Learn the fundamentals of CI/CD"
