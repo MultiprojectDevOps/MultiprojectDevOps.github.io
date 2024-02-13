@@ -1,7 +1,7 @@
-# Multiproject CI/CD
+# MultiprojectDevOps
 
 TODO: Catchier name?
 
 # Acknowledgements 
 
-TODO: Fill out!
+TODO: Request acknowledgement text
