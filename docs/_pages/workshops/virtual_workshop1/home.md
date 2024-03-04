@@ -20,9 +20,11 @@ CI/CD are more scarce. The goal of this workshop is to bring together CI/CD
 maintainers in order to identify challenges encountered in developing 
 multiproject CI/CD and to share potential solutions. 
 
-## Format
+## Logistics
 
-The workshop will be held virtually on Google Meet. All contributor talks will
+The workshop will be held virtually on Google Meet on XXX from YYY to ZZZ.
+
+All contributor talks will
 be recorded and made available on the 
 `MultiprojectDevOps Website <https://multiprojectdevops.github.io/>`.
 
@@ -35,11 +37,23 @@ calendar invite will be emailed to you.
 
 The organizers welcome contributions in two forms:
 
-1. Contributed talks, or
+1. Contributed presentation, or
 2. Position paper
 
-Participants interested in contributing a talk are encouraged to provide an
-abstract when registering. Participants interested in addressing
+Participants are welcome to contribute both a presentation and a position paper. 
+
+If you are interested in contributing a presentation, simply provide an abstract
+when registering. Depending on the number of abstracts received the organizers
+may need to down select. Participants whose abstracts are selected for
+presentations will be notified by XXX.
+
+Participants interested in providing position papers should provide responses to
+one or more of the following prompts:
+
+1. Software packages you maintain.
+2. Types of CI/CD components.
+
+Position papers should be contributed as PDF documents and 
 
 ## Agenda
 
