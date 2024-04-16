@@ -15,4 +15,4 @@ workshops we have held on Multiproject CI/CD.
 
 ## Past Workshops
 
-None yet!!!
+- April 11, 2024 [National Laboratory Information Technology Summit 2024](workshop_reports/nlit2024)
