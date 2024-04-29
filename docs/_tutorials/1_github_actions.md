@@ -26,7 +26,10 @@ are:
   same machine and each step has access to the previous step's outputs. Each 
   step is either a script or a call to an action. Steps are the most fundamental piece of a GitHub workflow.
 
-In the context of multiproject CI/CD we also 
+In the context of multiproject CI/CD we also have:
 
-- Reusable workflows. Templated workflows. Acts like a job.
-- Composite actions. Bundles many actions together into a single step. Must be called from within another workflow's jobs.
+- Reusable workflows. Templated workflows. Acts like a job. Can't call other
+  reusable workflows.
+- Composite actions. Bundles many actions together into a single step. Must be 
+  called from within another workflow's jobs.
+

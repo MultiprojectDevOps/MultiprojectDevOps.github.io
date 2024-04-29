@@ -27,3 +27,14 @@ the composite action.
 ## [Best Practices for Reusable Workflows in GitHub Actions](https://earthly.dev/blog/github-actions-reusable-workflows/)
 
 ## [Understanding and Using Composite Actions in GitHub](https://earthly.dev/blog/composite-actions-github/)
+
+Provides a short tutorial on composite actions and provides some best practices.
+Specific recommendations:
+
+1. Composite actions should be in individual repositories.
+   - Allows the action to be versioned by git tags
+   - GitHub won't let you publish it to their action store otherwise.
+2. Version the composite actions.
+   - Facilitates use without changes breaking them.
+3. If you do put multiple composite actions into a single repo, put each in its
+   own directory.

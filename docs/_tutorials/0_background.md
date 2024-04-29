@@ -33,3 +33,5 @@ repeat yourself" it is important to avoid duplication so that:
 - there exists a single source of truth
 - bugs/errors are not propagated via copy/paste
 - easier to reuse battle-tested functionality
+
+## Managing dependencies
