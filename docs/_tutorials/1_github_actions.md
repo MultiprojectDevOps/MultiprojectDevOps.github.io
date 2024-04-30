@@ -28,7 +28,7 @@ are:
 
 In the context of multiproject CI/CD we also have:
 
-- Reusable workflows. Templated workflows. Acts like a job. Can't call other
+- Reusable workflows. Templated workflows. Acts like a job. Can call other
   reusable workflows.
 - Composite actions. Bundles many actions together into a single step. Must be 
   called from within another workflow's jobs.
