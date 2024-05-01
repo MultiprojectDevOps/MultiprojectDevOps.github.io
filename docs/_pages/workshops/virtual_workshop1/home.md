@@ -22,6 +22,17 @@ scarce. The goal of this workshop is to bring together CI/CD maintainers in
 order to identify challenges encountered in developing multiproject CI/CD and to 
 share potential solutions. 
 
+## Dr. Ryan Richard
+
+<img src="../../assets/ryan_m_richard.jpg" width="200">
+
+Dr. Ryan Richard, is a computational chemist with joint appointments at
+Ames National Laboratory and Iowa State University. He is chief architect and
+lead developer of the NWChemEx, an exscale-capable reimplementation of the
+popular Chemistry code, NWChem. Dr. Richard was recently named a Fellow by the
+[Better Scientific Software Fellowship](https://bssw.io/pages/bssw-fellowship-program)
+in support of his efforts to promote mulitproject CI/CD best practices.
+
 ## Logistics
 
 The workshop will be held virtually on Google Meet on June 14, 2024 from 1:00-
