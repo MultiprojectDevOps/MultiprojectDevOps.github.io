@@ -11,6 +11,8 @@ header:
       url: /updates/
     - label: "Tutorials"
       url: /tutorials/
+- label: "Not a path"
+      url: /not_a_path/
 gallery:
   - image_path: /_pages/assets/resources.png
     title: "Learn the fundamentals of CI/CD"
