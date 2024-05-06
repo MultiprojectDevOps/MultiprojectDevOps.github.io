@@ -20,16 +20,19 @@ on:
       - master
   
 jobs:
+  check_licenses:
+    runs-on: ubuntu-latest
+    steps:
+      - name: License Files
+        uses: apache/skywalking-eyes@v0.4.0
+        with:
+          config: .github/.licenserc.yaml
+          mode: check
   test_build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-    - name: License Files
-      uses: apache/skywalking-eyes@v0.4.0
-      with:
-        config: .github/.licenserc.yaml
-        mode: check
     - uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v3
       with:
         gemfile-location: '/docs'
