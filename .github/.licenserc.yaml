@@ -1,4 +1,4 @@
-# Copyright 2024 Multiproject Devops Team
+# Copyright 2024 Multiproject DevOps Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,21 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+header:
+  license:
+    spdx-id: Apache-2.0
+    copyright-owner: Multiproject-DevOps-Team
 
-# Directory created by bundle install
-docs/vendor
-docs/_site
+  paths-ignore:
+    - .github/
+    - docs/Gemfile
+    - LICENSE
 
-# Virtual environment names
-venv/
+  comment: never
 
-Gemfile.lock
-
-# LaTeX auxiliary files
-cv.aux
-cv.log
-cv.out
-cv.synctex.gz
-
-#VSCode Settings
-.vscode/
+  license-location-threshold: 80

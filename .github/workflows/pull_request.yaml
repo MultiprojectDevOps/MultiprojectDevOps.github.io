@@ -12,20 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Directory created by bundle install
-docs/vendor
-docs/_site
+name: Pull Request Workflow
 
-# Virtual environment names
-venv/
-
-Gemfile.lock
-
-# LaTeX auxiliary files
-cv.aux
-cv.log
-cv.out
-cv.synctex.gz
-
-#VSCode Settings
-.vscode/
+on:
+  pull_request:
+    branches:
+      - master
+  
+jobs:
+  check_licenses:
+    runs-on: ubuntu-latest
+    steps:
+      - name: License Files
+        uses: apache/skywalking-eyes@v0.4.0
+        with:
+          config: .github/.licenserc.yaml
+          mode: check
+  test_build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v3
+      with:
+        gemfile-location: '/docs'
+        site-directory: '/docs'
