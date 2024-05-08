@@ -1,3 +1,7 @@
+---
+title: GitHub Actions and Multiproject CI/CD
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -14,9 +18,6 @@
   ~ limitations under the License.
 -->
 
----
-title: GitHub Actions and Multiproject CI/CD
----
 
 This tutorial is still a work in progress.
 {: .notice--warning}

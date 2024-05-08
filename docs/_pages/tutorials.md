@@ -1,3 +1,12 @@
+---
+title: Tutorials
+layout: collection
+permalink: /tutorials/
+collection: tutorials
+entries_layout: grid
+classes: wide
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -13,14 +22,5 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
----
-title: Tutorials
-layout: collection
-permalink: /tutorials/
-collection: tutorials
-entries_layout: grid
-classes: wide
----
 
 This is a collection of tutorials.

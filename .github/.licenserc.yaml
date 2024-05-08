@@ -23,3 +23,5 @@ header:
     - LICENSE
 
   comment: never
+
+  license-location-threshold: 80

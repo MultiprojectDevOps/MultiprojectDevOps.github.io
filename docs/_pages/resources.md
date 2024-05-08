@@ -1,3 +1,8 @@
+---
+layout: splash
+permalink: /resources/
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -13,11 +18,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
----
-layout: splash
-permalink: /resources/
----
 
 This page collects various resources which were used to build the content of 
 this website. This is NOT meant to be an exhaustive list of resources.

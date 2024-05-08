@@ -1,3 +1,7 @@
+---
+title: Background on Multiproject CI/CD
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -13,10 +17,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
----
-title: Background on Multiproject CI/CD
----
 
 This tutorial is still a work in progress.
 {: .notice--warning}

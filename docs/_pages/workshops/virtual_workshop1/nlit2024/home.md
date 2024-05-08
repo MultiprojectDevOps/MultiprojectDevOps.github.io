@@ -1,3 +1,9 @@
+---
+layout: splash
+permalink: /workshop_reports/nlit2024/
+title: BoF at NLIT 2024
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -14,11 +20,6 @@
   ~ limitations under the License.
 -->
 
----
-layout: splash
-permalink: /workshop_reports/nlit2024/
-title: BoF at NLIT 2024
----
 # BoF at NLIT 2024
 
 Ryan Richard is thankful for having had the opportunity to hold a Birds of a Feather (BoF) workshop at the 2024 National Laboratory Information Technology Summit in Seattle, Washington ([Conference Website](https://www.fbcinc.com/e/nlit/default.aspx)) on 4/11/2024 from 8:00 AM to 8:30 AM PDT. Ryan is also thankful to the many people who participated in the workshop. The results of this workshop are summarized on this page.

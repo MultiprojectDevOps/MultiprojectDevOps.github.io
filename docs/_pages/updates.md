@@ -1,3 +1,10 @@
+---
+title: Updates
+permalink: /updates/
+layout: posts
+author_profile: true
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -13,12 +20,5 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
----
-title: Updates
-permalink: /updates/
-layout: posts
-author_profile: true
----
 
 Updates on the project.

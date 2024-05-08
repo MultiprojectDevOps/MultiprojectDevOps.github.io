@@ -1,3 +1,8 @@
+---
+layout: splash
+permalink: /presentations/
+---
+
 <!--
   ~ Copyright 2024 Multiproject DevOps Team
   ~
@@ -13,11 +18,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
----
-layout: splash
-permalink: /presentations/
----
 
 # Presentations on Multiproject CI/CD
 
