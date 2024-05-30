@@ -5,6 +5,9 @@ permalink: /workshop_reports/virtual_workshop1/
 
 # Virtual Workshop on Multiproject CI/CD
 
+Abstract submission has been extended by another week to June 6, 2024.
+{: .notice}
+
 Scientific software is becoming increasingly modular. While this is boon for
 reuse, it can lead to maintenance headaches. In particular, the more software
 an organization develops the more continuous integration/continuous deployment
