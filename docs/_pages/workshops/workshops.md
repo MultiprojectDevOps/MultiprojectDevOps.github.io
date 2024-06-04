@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /workshop_reports/
+permalink: /workshops/
 ---
 
 # Multiproject CI/CD Workshop Reports
@@ -10,9 +10,9 @@ workshops we have held on Multiproject CI/CD.
 
 ## Upcoming Workshops
 
-- June 14, 2024 [Virtual Workshop 1](/workshop_reports/virtual_workshop1/)
+- June 14, 2024 [Virtual Workshop 1](/workshops/virtual_workshop1/)
 - TBD Virtual Workshop 2
 
 ## Past Workshops
 
-- April 11, 2024 [National Laboratory Information Technology Summit 2024](workshop_reports/nlit2024)
+- April 11, 2024 [National Laboratory Information Technology Summit 2024](nlit2024)

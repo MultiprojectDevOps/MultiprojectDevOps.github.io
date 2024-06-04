@@ -20,10 +20,10 @@ gallery:
     title: "Presentations on Multiproject CI/CD"
     alt: "presentations"
     url: "/presentations/"
-  - image_path: /_pages/assets/workshop_reports.png
+  - image_path: /_pages/assets/workshops.png
     title: "Summaries of Past Multiproject CI/CD Workshops"
-    alt: "Workshop reports"
-    url: "/workshop_reports/"
+    alt: "Workshops"
+    url: "/workshops/"
 ---
 
 This website is under heavy construction at the moment.
