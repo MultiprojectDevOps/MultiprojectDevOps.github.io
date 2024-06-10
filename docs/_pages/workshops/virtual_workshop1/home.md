@@ -5,7 +5,7 @@ permalink: /workshops/virtual_workshop1/
 
 # Virtual Workshop on Multiproject CI/CD
 
-Abstract submission has been extended by another week to June 6, 2024.
+Abstract submission is now closed.
 {: .notice}
 
 Scientific software is becoming increasingly modular. While this is boon for
@@ -67,8 +67,26 @@ presentations will be notified by May 30, 2024.
 
 ## Agenda
 
-The exact agenda will be available closer to the event. We anticipate a mix of
-contributed talks, a summary of the request for information, and one or more
-panel discussions.
+| Time (CST)  | Title                                                                          | Speaker          | Affiliation                            |
+| ----------- | ------------------------------------------------------------------------------ | ---------------- | -------------------------------------- |
+| 1:00 - 1:10 | Introduction and opening remarks                                               | Ryan M. Richard  | Ames National Laboratory               |
+| 1:15 - 1:35 | Standardized CI and dependency management, a prerequisite to Multi-Project CI? | Adrien Bernede   | Lawrence Livermore National Laboratory |
+| 1:40 - 2:00 | Continuous Integration in the the NWChemEx Stack                               | Jonathan Waldrop | Ames National Laboratory               |
+| 2:05 - 2:55 | Birds of a Feather (BoF) session                                               | Ryan M. Richard  | Ames National Laboratory               |
+| 2:55 - 3:00 | Closing remarks                                                                | Ryan M. Richard  | Ames National Laboratory               |
+
+The BoF session is intended to be an open discussion among workshop
+participants. In attempt to motivate such discussion we have identified a number
+of prompts:
+
+1. What tasks do your single, or multiproject, CI/CD pipelines currently
+   perform?
+2. What pieces of CI/CD do you currently reuse among projects?
+3. How are you testing your CI/CD pipelines?
+4. How do you manage dependencies among pipelines?
+5. Have you tried any existing multiproject CI/CD solutions?
+
 
 ## Acknowledgements
+
+TODO: Get funding acknowledgement
