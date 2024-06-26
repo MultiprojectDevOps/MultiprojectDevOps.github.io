@@ -10,9 +10,11 @@ workshops we have held on Multiproject CI/CD.
 
 ## Upcoming Workshops
 
-- June 14, 2024 [Virtual Workshop 1](/workshops/virtual_workshop1/)
 - TBD Virtual Workshop 2
 
 ## Past Workshops
 
+- June 14, 2024 [Virtual Workshop 1](/workshops/virtual_workshop1/)
+  - [Summary](virtual_workshop1/summary)
+  - [Transcript](virtual_workshop1/transcript)
 - April 11, 2024 [National Laboratory Information Technology Summit 2024](nlit2024)

@@ -5,7 +5,7 @@ permalink: /workshops/virtual_workshop1/
 
 # Virtual Workshop on Multiproject CI/CD
 
-Abstract submission has been extended by another week to June 6, 2024.
+Abstract submission is now closed.
 {: .notice}
 
 Scientific software is becoming increasingly modular. While this is boon for
