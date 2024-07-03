@@ -28,6 +28,15 @@ permalink: /workshops/virtual_workshop1/summary/
     repos.
 
 ## Speaker Jonathan Waldrop (AMES)
+- Focus is on how CI/CD is currently being handled inside the NWChemEx stack.
+- NWChemEx is a modular rewrite of NWChem using a combination of C++ and Python.
+- Targets exascale machines, but intended for use on all platforms.
+- Modules are interoperable so should be able to reuse CI infrastructure.
+- Components are in separate repos, but want CI to be usable by those repos.
+- Lots of potential CI/CD solutions on which to build multiproject CI/CD.
+- Tried synching files in the past, but that was a mess.
+- Using containerization to cache dependencies and ensure repeatable, 
+  reproducible environment for each build.
 
 Notes from chat:
 On GitHub vs GitLab
