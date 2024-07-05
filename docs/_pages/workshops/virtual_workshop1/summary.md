@@ -37,6 +37,18 @@ permalink: /workshops/virtual_workshop1/summary/
 - Tried synching files in the past, but that was a mess.
 - Using containerization to cache dependencies and ensure repeatable, 
   reproducible environment for each build.
+- Use GitHub's reusable workflows to reference the CI stored in a central
+  repository. Allows the CI to only be written once.
+- Question: If a repo requires a change in the central CI do you have to make
+  a separate version?
+- Answer: Yes, but the NWChemEx CI is designed so one can ignore parts that are
+  not relevant/sufficient while still using the parts that are.
+- Question: Are you using containers in production?
+- Answer: Not really. Containers are used to ensure reproducible builds.
+- Question: How is the CI pulling the source code for each project being built?
+- Answer: Uses the GitHub action for checking out repos. The build system takes
+  care of pulling dependencies.
+
 
 Notes from chat:
 On GitHub vs GitLab
