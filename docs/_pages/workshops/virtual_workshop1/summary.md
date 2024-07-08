@@ -48,7 +48,28 @@ permalink: /workshops/virtual_workshop1/summary/
 - Question: How is the CI pulling the source code for each project being built?
 - Answer: Uses the GitHub action for checking out repos. The build system takes
   care of pulling dependencies.
+- Question: Does the CI/CD also ensure that external plugins work? Can you 
+  merge if a change breaks an external plugin? 
+- Answer: NWChemEx users can use as much or as little of the internal
+  infrastructure as they choose. Beyond that it would be a case-by-case basis.
 
+
+## BOF Session
+- Question: With the CI/CD steps so tailored to the project, how does one write
+  generic tutorials and best practices for multiproject CI/CD?
+- Answer: Focusing more on how to structure the CI/CD, where to store the CI/CD
+  pipelines, how to structure the directories, whether to have each repo provide
+  its own build actions, etc.
+- Question: Are you taking security into account? Using GitHub actions developed
+  by other people could compromise secrets.
+- Answers: 
+  - Less of a concern for open-source projects because they only need
+    secrets to deploy. Deployment actions are written by the organization and
+    thus shouldn't be a security concern.
+  - Can separate CI/CD so untrusted steps don't happen in the same workflow as
+    trusted steps.
+  - The Multiproject DevOps organization would welcome tutorials on 
+    cybersecurity
 
 Notes from chat:
 On GitHub vs GitLab
