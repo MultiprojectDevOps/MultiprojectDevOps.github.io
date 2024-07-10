@@ -70,16 +70,26 @@ permalink: /workshops/virtual_workshop1/summary/
     trusted steps.
   - The Multiproject DevOps organization would welcome tutorials on 
     cybersecurity
-
-Notes from chat:
-On GitHub vs GitLab
-- GitLab used internally for rapid development, GitHub for public release.
-- SNL used to use GitHub, but has now moved fully to GitLab.
-- LLNL is using GitHub for open-source projects, and GitLab for internal projects as a successor to Bitbucket/Bamboo.
-
-On testing CI
-- Don't know what "testing CI" really means
-- I've had a lot of trouble "debugging CI" -- it seems the only way to really get over the humps to making your CI work is to run it, wait for a runner to pick up, (on an hpc system) deal with queues, ...
+- In the Julia ecosystem (specifically in optimization circles), packages will
+  build downstream dependencies with their new changes to see if they break
+  things. 
+  - Spack package manager does similar testing to make sure changes still lead
+    to consistent dependency trees.
+  - Jenkins, GitHub, and GitLab make it easy to call other pipelines enabling
+    this sort of downstream testing for other ecosystems. 
+- Another strategy for multiproject CI/CD is to store the CI/CD in a repository
+  that is included by other repositories via git submodules.
+  - Strategy may not work on GitLab. 
+- Approaches to multiproject CI/CD may vary for projects which form a loose
+  federation versus those that are a more tight federation.
+- Some projects can delegate CI/CD to a super project. Works best with a tight
+  federation.
+- Question: How do you test your CI/CD?
+  - Not obvious what "testing CI" means.
+  - Debugging CI is difficult, only tried and true solution is to run it and
+    see what happens.
+  - Code coverage can help. If code coverage suddenly drops CI/CD may not be
+    running part of the pipeline.
 
 On best practices:
 - Fun fact is that I actually encourage folks to consider CI configuration files as code, in the sense of avoiding duplication, keeping the code clean and documented. But I am not really "testing" the CI.
@@ -94,3 +104,8 @@ Takeaways
   - Is it reusing CI/CD components in multiple projects?
   - Is it what GitLab calls mutiproject pipelines (when an upstream project 
     calls the pipeline of a downstream project)?
+- GitHub and GitLab are both used for scientific computing, with GitHub
+  being preferred for open-source projects and GitLab for projects where 
+  security is an issue.
+- Approaches to multiproject CI/CD may need to vary depending on how tightly
+  federated the projects are.
