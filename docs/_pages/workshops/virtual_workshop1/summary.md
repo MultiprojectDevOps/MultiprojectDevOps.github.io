@@ -5,6 +5,27 @@ permalink: /workshops/virtual_workshop1/summary/
 
 # Summary of Virtual Workshop 1
 
+At a high-level the key findings of this workshop were:
+
+- Need to better define multiproject CI/CD ahead of time.
+  - Is it writing a single CI/CD for multiple projects?
+  - Is it reusing CI/CD components in multiple projects?
+  - Is it what GitLab calls mutiproject pipelines (when an upstream project 
+    calls the pipeline of a downstream project)?
+- GitHub and GitLab are both used for scientific computing, with GitHub
+  being preferred for open-source projects and GitLab for projects where 
+  security is an issue.
+- Approaches to multiproject CI/CD may need to vary depending on how tightly
+  federated the projects are.
+- Security remains a large consideration for some organizations, particularly
+  when reusing CI/CD pipelines from other organizations.
+  - Likely will need to separate out secure parts.
+- When reuse is possible, GitHub/GitLab offer their own solutions; however,
+  some devops engineers have also rolled their own solutionss such as relying on dedicated CI/CD repos or using git submodules.
+
+The following subsections provide more detailed summaries of the two speakers
+and the birds of a feather session that followed.
+
 ## Speaker Adrien Bernede (LLNL)
 - Use GitLab to host CI, but not for hosting (hosted on GitHub)
 - Adrien is working on radius project (TODO: check name in transcript is right)
@@ -15,7 +36,6 @@ permalink: /workshops/virtual_workshop1/summary/
 - Use parent-child GitLab CI pipelines.
 - Each project defines its child pipeline and inputs it takes. The child 
   pipeline is then run by the parent pipeline 
-  (TODO: Verify)
 - Users can see what has been validated and use it in their pipelines
 - Relies on Cmake cache for synchronizing dependencies (TODO: verify)
 - Setup for a project looks like a list of specs.
@@ -90,22 +110,16 @@ permalink: /workshops/virtual_workshop1/summary/
     see what happens.
   - Code coverage can help. If code coverage suddenly drops CI/CD may not be
     running part of the pipeline.
+  - CI errors caught quickly because they are run often.
+  - Check for artifacts at end of build.
+  - If CI is in separate repos can make changes on branches to avoid breaking
+    downstream repos.
+- Question: What sort of CI/CD pieces do people reuse?
+  - Perhaps less of an issue for Python because the builds are easier.
+  - Distinguish between reusing something someone else wrote vs. something the
+    organization wrote. Again security concerns.
+  - A lot of code duplication is small, and while it could be factored out, the
+    code to call the factored code is just as repetitive.
+- Question: Are the testing and build machinery the same?
+  - Concerns about secrets and CI passing suggest people treat them the same.
 
-On best practices:
-- Fun fact is that I actually encourage folks to consider CI configuration files as code, in the sense of avoiding duplication, keeping the code clean and documented. But I am not really "testing" the CI.
--  I'll admit that we never really thought about consolidating our CI to avoid repetition. We just have very similar GH actions workflows in multiple repos, but no formal mechanism to keep them in sync.
-- we have a lot of ~10 LOC steps in GHA yamls that _could_ be wrapped up into standalone actions but it's a headache when 20% of the time one of those lines needs something different ... so then you either need to inject an option or just use the code itself anyway
-- GHA are meant to describe steps of your CI workflow, aren’t there. Is there a way in github to write a workflow that would be a "template" for other project to use ?
-
-Takeaways
-
-- Need to better define multiproject CI/CD ahead of time.
-  - Is it writing a single CI/CD for multiple projects?
-  - Is it reusing CI/CD components in multiple projects?
-  - Is it what GitLab calls mutiproject pipelines (when an upstream project 
-    calls the pipeline of a downstream project)?
-- GitHub and GitLab are both used for scientific computing, with GitHub
-  being preferred for open-source projects and GitLab for projects where 
-  security is an issue.
-- Approaches to multiproject CI/CD may need to vary depending on how tightly
-  federated the projects are.
