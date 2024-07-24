@@ -10,8 +10,8 @@ workshops we have held on Multiproject CI/CD.
 
 ## Upcoming Workshops
 
-- TBD Virtual Workshop 2
-
+- December 6, 2024 [Virtual Workshop 2](/workshops/virtual_workshop2/)
+ 
 ## Past Workshops
 
 - June 14, 2024 [Virtual Workshop 1](/workshops/virtual_workshop1/)

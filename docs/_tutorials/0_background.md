@@ -35,3 +35,5 @@ repeat yourself" it is important to avoid duplication so that:
 - easier to reuse battle-tested functionality
 
 ## Managing dependencies
+
+## Security
