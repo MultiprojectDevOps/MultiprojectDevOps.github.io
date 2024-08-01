@@ -15,6 +15,13 @@ made copious use of the official documentation. The official
 documentation is dense, but thorough. We recommend using it as a resource for
 looking up APIs.
 
+# CI/CD Resources
+
+## [BSSW: What is Continuous Integration?](https://tinyurl.com/ysnkyeyv)
+
+Excellent introduction to what is CI from the perspective of scientific
+software. Does not however cover the CD aspect.
+
 # Multiproject CI/CD Resources
 
 ## [Damien Aicheh Blog](https://tinyurl.com/474x99k9)
