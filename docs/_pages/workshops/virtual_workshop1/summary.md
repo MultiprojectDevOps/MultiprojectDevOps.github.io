@@ -21,12 +21,13 @@ At a high-level the key findings of this workshop were:
   when reusing CI/CD pipelines from other organizations.
   - Likely will need to separate out secure parts.
 - When reuse is possible, GitHub/GitLab offer their own solutions; however,
-  some devops engineers have also rolled their own solutionss such as relying on dedicated CI/CD repos or using git submodules.
+  some devops engineers have also rolled their own solutions such as relying on dedicated CI/CD repos or using git submodules.
 
 The following subsections provide more detailed summaries of the two speakers
 and the birds of a feather session that followed.
 
 ## Speaker Adrien Bernede (LLNL)
+- [Video](https://youtu.be/Jm5yP3sTxEM)
 - Use GitLab to host CI, but not for hosting (hosted on GitHub)
 - Adrien is working on radius project (TODO: check name in transcript is right)
   which is an umbrella project supporting more than 30 open source projects at
@@ -48,6 +49,7 @@ and the birds of a feather session that followed.
     repos.
 
 ## Speaker Jonathan Waldrop (AMES)
+- [Video](https://youtu.be/CZkupiX9mh8)
 - Focus is on how CI/CD is currently being handled inside the NWChemEx stack.
 - NWChemEx is a modular rewrite of NWChem using a combination of C++ and Python.
 - Targets exascale machines, but intended for use on all platforms.
