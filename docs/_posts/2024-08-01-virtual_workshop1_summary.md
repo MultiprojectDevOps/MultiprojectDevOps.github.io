@@ -1,4 +1,4 @@
-On 6/14/2024 we held the first virtual workshop on Multiproject CI/CD. Today we
+On 6/14/2024 we held the first virtual workshop on Multi-Project CI/CD. Today we
 are pleased to announce that video recordings, transcripts, and an executive
 summary are now available.
 

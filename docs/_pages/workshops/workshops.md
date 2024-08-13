@@ -3,15 +3,15 @@ layout: splash
 permalink: /workshops/
 ---
 
-# Multiproject CI/CD Workshop Reports
+# Multi-Project CI/CD Workshop Reports
 
 This section of the website collects upcoming workshops and summaries of past
-workshops we have held on Multiproject CI/CD.
+workshops we have held on multi-project CI/CD.
 
 ## Upcoming Workshops
 
 - December 6, 2024 [Virtual Workshop 2](/workshops/virtual_workshop2/)
- 
+
 ## Past Workshops
 
 - June 14, 2024 [Virtual Workshop 1](/workshops/virtual_workshop1/)

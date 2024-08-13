@@ -16,16 +16,16 @@ head_scripts:
 
 # Site Settings
 locale                   : "en-US"
-title                    : Best Practices for Multiproject CI/CD 
+title                    : Best Practices for Multi-Project CI/CD
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ryan M. Richard"
 description              : >- # this means to ignore newlines until "url:"
-                            Tutorials and resources for developing and 
+                            Tutorials and resources for developing and
                             maintaining CI/CD pipelines for multiple projects.
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "rmrresearch/organizationci"
+repository               : "MultiprojectDevOps/MultiprojectDevOps.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 words_per_minute         : 200
@@ -82,7 +82,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/rmrresearch/organizationci"
+      url: "https://github.com/MultiprojectDevOps/MultiprojectDevOps.github.io"
 
 
 # Reading Files
@@ -129,7 +129,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
- 
+
 
 # Markdown Processing
 kramdown:
@@ -198,7 +198,7 @@ collections:
   tutorials:
     output: true
     permalink: /:collection/:path/
-  
+
 # Defaults
 defaults:
   # _posts
@@ -230,4 +230,5 @@ defaults:
       layout: single
       author_profile: false
       share: true
+      classes: wide
       read_time: true

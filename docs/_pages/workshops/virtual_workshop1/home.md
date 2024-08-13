@@ -3,7 +3,7 @@ layout: splash
 permalink: /workshops/virtual_workshop1/
 ---
 
-# Virtual Workshop on Multiproject CI/CD
+# Virtual Workshop on Multi-Project CI/CD
 
 Abstract submission is now closed.
 {: .notice}
@@ -17,13 +17,13 @@ for a number of projects. Since these projects are developed by the same
 organization, these CI/CD workflows tend to have common needs that can be
 addressed by common solutions.
 
-We founded the MultiprojectDevOps project in order to establish best practices
-for developing and maintaining multiproject CI/CD workflows. While there are a
+We founded the Multi-ProjectDevOps project in order to establish best practices
+for developing and maintaining multi-project CI/CD workflows. While there are a
 number of online resources covering best practices of CI/CD for a single
-project, resources dedicated to the maintenance of multiproject CI/CD are more
+project, resources dedicated to the maintenance of multi-project CI/CD are more
 scarce. The goal of this workshop is to bring together CI/CD maintainers in
-order to identify challenges encountered in developing multiproject CI/CD and to
-share potential solutions.
+order to identify challenges encountered in developing multi-project CI/CD and
+to share potential solutions.
 
 ## Dr. Ryan Richard
 
@@ -79,12 +79,12 @@ The BoF session is intended to be an open discussion among workshop
 participants. In attempt to motivate such discussion we have identified a number
 of prompts:
 
-1. What tasks do your single, or multiproject, CI/CD pipelines currently
+1. What tasks do your single, or multi-project, CI/CD pipelines currently
    perform?
 2. What pieces of CI/CD do you currently reuse among projects?
 3. How are you testing your CI/CD pipelines?
 4. How do you manage dependencies among pipelines?
-5. Have you tried any existing multiproject CI/CD solutions?
+5. Have you tried any existing multi-project CI/CD solutions?
 
 
 ## Acknowledgements
