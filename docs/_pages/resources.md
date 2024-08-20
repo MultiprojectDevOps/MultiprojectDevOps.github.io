@@ -112,3 +112,18 @@ Specific recommendations:
    - Facilitates use without changes breaking them.
 3. If you do put multiple composite actions into a single repo, put each in its
    own directory.
+
+## [GitHub: Composite Actions vs Reusable Workflows [Updated 2023]](https://tinyurl.com/4x6k4wx3)
+
+As the title suggests, this article provides a comparison between GitHub's
+composite actions and reusable workflows. The differences include:
+
+1. Visibility and logging. Every job and step in a reusable workflow is logged
+   independently. Composite actions combine logging of their steps into a single
+   output.
+2. Jobs. Reusable workflows support multiple jobs, composite actions are run
+   from within a job. Corollary is only reusable workflows can specify runners.
+3. Invoking. Reusable workflows are called from within a job definition and will
+   be the entirety of the job, i.e., you can not add additional steps to the
+   job. Composite actions are called as job steps and may be proceeded or
+   succeeded by other steps.

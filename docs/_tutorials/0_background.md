@@ -96,6 +96,8 @@ is that the the *N* pipelines tend to have common needs, e.g.:
 The need to maintain functionalities used by multiple CI/CD pipelines is the
 primary difference between multi- project and single project CI/CD.
 
+![Single project vs. multi-project CI/CD](/tutorials/assets/single_vs_multi.png)
+
 # What are the best practices for maintaining multi-project CI/CD pipelines?
 
 Other tutorials in this series are designed to delve into this topic in more
