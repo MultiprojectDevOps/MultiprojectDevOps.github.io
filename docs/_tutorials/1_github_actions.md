@@ -75,13 +75,6 @@ with a table summarizing the terminology.
 
 # CI/CD File Architecture
 
-Developing GitHub Actions requires some familiarity with YAML (a recursive
-acronym that stands for "YAML Ain't Markup Language"). Since YAML is a
-common data serialization language, we assume the reader has familiarity
-with it; if not, see [GitHub Actions Resources](/resources/#github-actions) for
-resources which will quickly acquaint you with YAML.
-{: .notice}
-
 GitHub Actions are added to a repository by adding entry workflows to the
 `.github/workflows` directory (path is relative to the root of the repository
 and mandated by GitHub). Each workflow is a YAML file and GitHub requires that
