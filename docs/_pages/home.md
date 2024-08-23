@@ -30,9 +30,6 @@ gallery2:
     url: "/resources/"
 ---
 
-This website is under heavy construction at the moment.
-{: .notice--warning}
-
 {% include gallery %}
 
 {% include gallery id="gallery2" %}

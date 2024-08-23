@@ -2,6 +2,11 @@
 title: Developing Composite Actions
 ---
 
+Multi-project CI/CD using GitHub Actions primarily revolves around the
+development of two types of components: composite actions and reusable
+workflows. Composite actions are the more fine-grained component and we thus
+opt to discuss them first.
+
 Developing GitHub Actions requires some familiarity with YAML (a recursive
 acronym that stands for "YAML Ain't Markup Language"). Since YAML is a
 common data serialization language, we assume the reader has familiarity
