@@ -5,7 +5,7 @@ permalink: /workshops/virtual_workshop2/
 
 # Second Virtual Workshop on Multi-Project CI/CD
 
-Abstract submission is open until November 22, 2024
+Abstract submission has been extended to November 29, 2024
 {: .notice}
 
 The Multi-ProjectDevOps project was founded to establish best practices for
