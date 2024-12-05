@@ -53,19 +53,15 @@ resource.
 
 ## Agenda
 
-The exact agenda for the workshop will depend on the number and quality of
-abstracts received. The organizers anticipate the following rough outline (will
-be updated as the workshop approaches).
+Given that no participants submitted an abstract, we have opted to shorten the
+workshop to one hour. The final agenda is:
 
 | Time (CST)  | Title                                | Speaker (Affiliation)  |
 | ----------- | ------------------------------------ | ---------------------- |
 | 1:00 - 1:05 | Introduction and opening remarks     | Ryan M. Richard (AMES) |
-| 1:10 - 1:30 | Contributed Presentation 1           | TBD                    |
-| 1:35 - 1:55 | Contributed Presentation 2           | TBD                    |
-| 2:00 - 2:20 | Contributed Presentation 3           | TBD                    |
-| 2:25 - 2:40 | Multi-Project CI/CD Best Practices   | Ryan M. Richard (AMES) |
-| 2:40 - 2:55 | Open Discussion/Additional Questions | All                    |
-| 2:55 - 3:00 | Closing Remarks                      | Ryan M. Richard (AMES) |
+| 1:05 - 1:25 | Multi-Project CI/CD Best Practices   | Ryan M. Richard (AMES) |
+| 1:30 - 1:55 | Open Discussion/Additional Questions | All                    |
+| 1:55 - 2:00 | Concluding remarks                   | Ryan M. Richard (AMES) |
 
 ## Acknowledgements
 
