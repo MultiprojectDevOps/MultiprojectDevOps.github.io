@@ -159,145 +159,186 @@ Ryan Richard: Lab person. The the main idea is we want to automate the building,
 testing, et cetera, of the software, and we can do that using the online 
 resources provided by Travis CI Jenkins GitHub, et cetera.
 
-27 "Ryan Richard" (1149588992)
-00:09:18.299 --> 00:09:38.299
-As I mentioned, we, the purpose of this workshop is really to focus on reusing CICD across projects. A lot of people I've talked to, they will say that, you know, CICD is project specific. And while that I think that's true when you're developing a single project, when you start developing plugins.
+Ryan Richard: As I mentioned, we, the purpose of this workshop is really to 
+focus on reusing CICD across projects. A lot of people I've talked to, they will 
+say that, you know, CICD is project specific. And while that I think that's true 
+when you're developing a single project, when you start developing plugins.
 
-28 "Ryan Richard" (1149588992)
-00:09:38.299 --> 00:10:07.399
-Or modules and they're all targeting the same framework. There ends, this sort of ends up being, the reality is you undermine that assumption. You end up reusing a lot of infrastructure from plugin to plugin module to module. And again, we want to make sure we have a single source of source of truth because if that framework changes, e.g., how we have to build, you don't want to go through 400 plus.
+Ryan Richard: Or modules and they're all targeting the same framework. There 
+ends, this sort of ends up being, the reality is you undermine that assumption. 
+You end up reusing a lot of infrastructure from plugin to plugin module to 
+module. And again, we want to make sure we have a single source of source of 
+truth because if that framework changes, e.g., how we have to build, you don't 
+want to go through 400 plus.
 
-29 "Ryan Richard" (1149588992)
-00:10:07.399 --> 00:10:31.069
-Ends and change the build system or something like that. And so I founded the multi project DevOps GitHub organization. You, if you Google multi project DevOps GitHub, you should, it should be the 1st hit. And the purpose of this organization is really to explore how to maintain multi pro.
+Ryan Richard: Ends and change the build system or something like that. And so I 
+founded the multi project DevOps GitHub organization. You, if you Google multi 
+project DevOps GitHub, you should, it should be the 1st hit. And the purpose of 
+this organization is really to explore how to maintain multi pro.
 
-30 "Ryan Richard" (1149588992)
-00:10:31.069 --> 00:10:42.059
-Project ecosystems. The named DevOps is a little bit aspirational right now it's really just focused on multi multi project CICD.
+Ryan Richard: Project ecosystems. The named DevOps is a little bit aspirational 
+right now it's really just focused on multi multi project CICD.
 
-31 "Ryan Richard" (1149588992)
-00:10:42.059 --> 00:11:01.109
-So, we went through several attempts in trying to figure out what's the best practices for multi project CICD. So we started with what everybody told us to do, which was copy paste and tweak. It was very tedious. We very.
+Ryan Richard: So, we went through several attempts in trying to figure out 
+what's the best practices for multi project CICD. So we started with what 
+everybody told us to do, which was copy paste and tweak. It was very tedious. 
+We very.
 
-32 "Ryan Richard" (1149588992)
-00:11:01.109 --> 00:11:17.999
-Often would run into problems where we forgot to include, say, a C a flag for the C compiler and you now have to update 30 repos because you forgot that flag. So we very quickly wanted to move on from that.
+Ryan Richard: Often would run into problems where we forgot to include, say, a 
+C a flag for the C compiler and you now have to update 30 repos because you 
+forgot that flag. So we very quickly wanted to move on from that.
 
-33 "Ryan Richard" (1149588992)
-00:11:17.999 --> 00:11:33.809
-We tried get sub modules and sub trees, if you've ever tried this before in your own ecosystem, maybe it's worked for you, but the vast majority of people I talk to say it's very confusing, it's hard to do and.
+Ryan Richard: We tried get sub modules and sub trees, if you've ever tried this 
+before in your own ecosystem, maybe it's worked for you, but the vast majority 
+of people I talk to say it's very confusing, it's hard to do and.
 
-34 "Ryan Richard" (1149588992)
-00:11:33.809 --> 00:11:50.189
-Error prone. Yeah, it requires a lot of developer discipline if you're not familiar with it. You have to remember to always pull the, the sub modules et cetera. Ultimately we moved on from that because our developers were not happy with that.
+Ryan Richard: Error prone. Yeah, it requires a lot of developer discipline if 
+you're not familiar with it. You have to remember to always pull the, the sub 
+modules et cetera. Ultimately we moved on from that because our developers were 
+not happy with that.
 
-35 "Ryan Richard" (1149588992)
-00:11:50.189 --> 00:12:10.189
-So GitHub had some actions that existed. They were for auto synchronizing, so you would essentially put the files in a centralized repository, so we would have like one CMake list.text that's sort of templated, you would have to go through and change the names.
+Ryan Richard: So GitHub had some actions that existed. They were for auto 
+synchronizing, so you would essentially put the files in a centralized 
+repository, so we would have like one CMake list.text that's sort of templated, 
+you would have to go through and change the names.
 
-36 "Ryan Richard" (1149588992)
-00:12:10.189 --> 00:12:28.499
-Of the libraries et cetera, but it sort of had the rough structure and then you would use this action to automatically synchronize that file across all the repos. So this was kind so you can think of this as automating the copy paste, it was better because it was one source of truth.
+Ryan Richard: Of the libraries et cetera, but it sort of had the rough structure
+and then you would use this action to automatically synchronize that file across 
+all the repos. So this was kind so you can think of this as automating the copy 
+paste, it was better because it was one source of truth.
 
-37 "Ryan Richard" (1149588992)
-00:12:28.499 --> 00:12:48.499
-What we found was the, the triggering was a little touchy. So sometimes the triggering wouldn't occur and so the changes wouldn't actually propagate, other times it would be constantly rewriting the files and could even get into loops where it saw that a file was.
+Ryan Richard: What we found was the, the triggering was a little touchy. So 
+sometimes the triggering wouldn't occur and so the changes wouldn't actually 
+propagate, other times it would be constantly rewriting the files and could even 
+get into loops where it saw that a file was.
 
-38 "Ryan Richard" (1149588992)
-00:12:48.499 --> 00:13:18.979
-Changed and so then it would change another file, but because that file changed, it went back. Thankfully GitHub stops those kinds of loops after a couple of iterations but yeah that was that was troublesome. We moved on to docker files after that and started version, we would version control the docker files. That was, that was ok. It ultimately led a lot of the repetition to just be in the docker file, so it didn't completely solve the problem.
+Ryan Richard: Changed and so then it would change another file, but because that 
+file changed, it went back. Thankfully GitHub stops those kinds of loops after a 
+couple of iterations but yeah that was that was troublesome. We moved on to 
+docker files after that and started version, we would version control the docker 
+files. That was, that was ok. It ultimately led a lot of the repetition to just 
+be in the docker file, so it didn't completely solve the problem.
 
-39 "Ryan Richard" (1149588992)
-00:13:18.979 --> 00:13:39.679
-We looked into making actions for GitHub actions, so unfortunately GitHub actions is both the name of the CICD framework and also a name of the component in the framework, so that's a little confusing, and so right here what I'm talking about is writing a component for that framework.
+Ryan Richard: We looked into making actions for GitHub actions, so unfortunately 
+GitHub actions is both the name of the CICD framework and also a name of the 
+component in the framework, so that's a little confusing, and so right here what 
+I'm talking about is writing a component for that framework.
 
-40 "Ryan Richard" (1149588992)
-00:13:39.679 --> 00:13:55.109
-So essentially you would write a little, application that knows how to say build a code using our build system, given a couple of parameters. So we could, that worked, that was a very.
+Ryan Richard: So essentially you would write a little, application that knows 
+how to say build a code using our build system, given a couple of parameters. So 
+we could, that worked, that was a very.
 
-41 "Ryan Richard" (1149588992)
-00:13:55.109 --> 00:14:11.249
-Nice solution other than writing GitHub actions is very heavy handed. That's, there's a lot of development that goes into writing a GitHub actions, and this just felt like overkill for trying to just modularize the CICD.
+Ryan Richard: Nice solution other than writing GitHub actions is very heavy 
+handed. That's, there's a lot of development that goes into writing a GitHub 
+actions, and this just felt like overkill for trying to just modularize the 
+CICD.
 
-42 "Ryan Richard" (1149588992)
-00:14:11.249 --> 00:14:31.249
-Thankfully, about the time we got to this point, GitHub apparently had also realized it was a problem and they introduced reusable workflows and composite actions. When we started down this endeavor, GitHub Actions actually did not have reusable workflows and composite actions, which is.
+Ryan Richard: Thankfully, about the time we got to this point, GitHub apparently 
+had also realized it was a problem and they introduced reusable workflows and 
+composite actions. When we started down this endeavor, GitHub Actions actually 
+did not have reusable workflows and composite actions, which is.
 
-43 "Ryan Richard" (1149588992)
-00:14:31.249 --> 00:14:51.249
-Why we didn't just jump to this solution. I think that only came out in maybe the last two to three years something like that. There is a similar feature in GitLab and ultimately reusable workflows composite actions is what we decided to go with, and that's really what a lot.
+Ryan Richard: Why we didn't just jump to this solution. I think that only came 
+out in maybe the last two to three years something like that. There is a similar 
+feature in GitLab and ultimately reusable workflows composite actions is what we 
+decided to go with, and that's really what a lot.
 
-44 "Ryan Richard" (1149588992)
-00:14:51.249 --> 00:15:18.889
-Of the best practices I'm gonna talk about are based off of and that's an example of a composite action there yeah so there's a little bit of background, so what makes multi project CICD different than CICD? So again, it's sort of this idea of reuse. So on the left side of the figure, you see that there's sort of two pipelines. There's one for package one, one.
+Ryan Richard: Of the best practices I'm gonna talk about are based off of and 
+that's an example of a composite action there yeah so there's a little bit of 
+background, so what makes multi project CICD different than CICD? So again, it's 
+sort of this idea of reuse. So on the left side of the figure, you see that 
+there's sort of two pipelines. There's one for package one, one.
 
-45 "Ryan Richard" (1149588992)
-00:15:18.889 --> 00:15:46.469
-For package two, they have sort of some similar components in there that they, e.g. both do a configure build and install s stage, but ultimately they're maintained as two separate scripts. In the multi project view, we view it as a reusable pipeline that we feed different packages through. So it's a fundamentally different way of thinking about it, trying to treat the pipeline as a single source of truth.
+Ryan Richard: For package two, they have sort of some similar components in 
+there that they, e.g. both do a configure build and install s stage, but 
+ultimately they're maintained as two separate scripts. In the multi project 
+view, we view it as a reusable pipeline that we feed different packages through. 
+So it's a fundamentally different way of thinking about it, trying to treat the 
+pipeline as a single source of truth.
 
-46 "Ryan Richard" (1149588992)
-00:15:46.469 --> 00:16:06.469
-One of the 1st one of the big differences in our experience between multi projects and single projects CICD is the fact that since you now have a bunch of projects relying on a single pipeline, if that pipeline breaks, you don't just break the one repo that the pipeline's associated with you.
+Ryan Richard: One of the 1st one of the big differences in our experience 
+between multi projects and single projects CICD is the fact that since you now 
+have a bunch of projects relying on a single pipeline, if that pipeline breaks, 
+you don't just break the one repo that the pipeline's associated with you.
 
-47 "Ryan Richard" (1149588992)
-00:16:06.469 --> 00:16:35.909
-Break the ecosystem that that pipeline's associated with. There's also security concerns. We're an open source package. We're not as concerned with security as a lot of other packages are. That's a problem. I don't know the answer to, and I'm just going to mention it does exist any time you're sharing ecos anytime you're sharing software across an ecosystem, there are security concerns, but that's not something we attempted to solve here.
+Ryan Richard: Break the ecosystem that that pipeline's associated with. There's 
+also security concerns. We're an open source package. We're not as concerned
+ with security as a lot of other packages are. That's a problem. I don't know 
+ the answer to, and I'm just going to mention it does exist any time you're 
+ sharing ecos anytime you're sharing software across an ecosystem, there are 
+ security concerns, but that's not something we attempted to solve here.
 
-48 "Ryan Richard" (1149588992)
-00:16:35.909 --> 00:16:55.909
-So, after a bunch of trial and error and looking on the internet and seeing what other people have done, we sort of came up with these four best practices for multi project cicds. The 1st one is dry. Don't repeat yourself. Just like all other software, you really.
+Ryan Richard: So, after a bunch of trial and error and looking on the internet 
+and seeing what other people have done, we sort of came up with these four best 
+practices for multi project cicds. The 1st one is dry. Don't repeat yourself. 
+Just like all other software, you really.
 
-49 "Ryan Richard" (1149588992)
-00:16:55.909 --> 00:17:15.909
-Really should be striving to follow good software engineering principles, and not repeating yourself, i. E. Having a single source of truth is one of the key principles. You also should be treating your infrastructure as codes. If you're not familiar with this concept, it's the idea that you should be using configuration files.
+Ryan Richard: Really should be striving to follow good software engineering 
+principles, and not repeating yourself, i. E. Having a single source of truth 
+is one of the key principles. You also should be treating your infrastructure as 
+codes. If you're not familiar with this concept, it's the idea that you should 
+be using configuration files.
 
-50 "Ryan Richard" (1149588992)
-00:17:15.909 --> 00:17:49.169
-Or scripts to set up the environment rather than GUIs. This allows you to version control your steps and to ensure that you're getting a consistent development environment in the CICD pipelines. There's this other idea of treat code as codes, so I made up this term, I don't think anyone else has used this, but when I talked to software engineers, they didn't have a catchy little terminology for this best practice. They said this is really sort of a.
+Ryan Richard: Or scripts to set up the environment rather than GUIs. This allows 
+you to version control your steps and to ensure that you're getting a consistent 
+development environment in the CICD pipelines. There's this other idea of treat 
+code as codes, so I made up this term, I don't think anyone else has used this, 
+but when I talked to software engineers, they didn't have a catchy little 
+terminology for this best practice. They said this is really sort of a.
 
-51 "Ryan Richard" (1149588992)
-00:17:49.169 --> 00:18:08.849
-It's obvious to them that you should be doing this, but in my experience, this is not obvious in the scientific computing circles. And so what does code does code mean? It means that you need to treat all of the code using best practices, not just the main software that is your.
+Ryan Richard: It's obvious to them that you should be doing this, but in my 
+experience, this is not obvious in the scientific computing circles. And so what 
+does code does code mean? It means that you need to treat all of the code using 
+best practices, not just the main software that is your.
 
-52 "Ryan Richard" (1149588992)
-00:18:08.849 --> 00:18:28.849
-Your package. So in our case of nwcax, e.g., we were of course using best practices for the main source code of nwcax, but what code is code refers to is you need to also be using the best practices for all your scripts that support it, your utilities.
+Ryan Richard: Your package. So in our case of nwcax, e.g., we were of course 
+using best practices for the main source code of nwcax, but what code is code 
+refers to is you need to also be using the best practices for all your scripts 
+that support it, your utilities.
 
-53 "Ryan Richard" (1149588992)
-00:18:28.849 --> 00:18:31.859
-Those sorts of things.
+Ryan Richard: Those sorts of things.
 
-54 "Ryan Richard" (1149588992)
-00:18:31.859 --> 00:18:51.859
-And I alluded to it on the last slide. The other main multi best practice here is testing. In my experience a lot of people don't have formal tests in place for CICD, often it's you write a CICD workflow and you trigger it, see if it works, if it did, great, if it didn't, then.
+Ryan Richard: And I alluded to it on the last slide. The other main multi best 
+practice here is testing. In my experience a lot of people don't have formal 
+tests in place for CICD, often it's you write a CICD workflow and you trigger 
+it, see if it works, if it did, great, if it didn't, then.
 
-55 "Ryan Richard" (1149588992)
-00:18:51.859 --> 00:19:22.889
-You go back and you iterate until it works. Testing becomes a lot more important. Again, you're gonna have an e ecosystem depending on these things, you can't just be pushing changes to the workflows and hope that they work because you may end up bricking an entire ecosystem. What's good about this is since you we've factored out the CICD into one place, and I'll go into that on the next slide. It's easier to test it.
+Ryan Richard: You go back and you iterate until it works. Testing becomes a lot 
+more important. Again, you're gonna have an e ecosystem depending on these 
+things, you can't just be pushing changes to the workflows and hope that they 
+work because you may end up bricking an entire ecosystem. What's good about this 
+is since you we've factored out the CICD into one place, and I'll go into that 
+on the next slide. It's easier to test it.
 
-56 "Ryan Richard" (1149588992)
-00:19:22.889 --> 00:19:42.889
-Because it's only in one repo. We don't have to worry about testing multiple repos simultaneously. So as far as GitHub specific best practices, which is what I've really been focusing on, you sort of have these two things, you have composite actions, which you can think of a composite action.
+Ryan Richard: Because it's only in one repo. We don't have to worry about 
+testing multiple repos simultaneously. So as far as GitHub specific best 
+practices, which is what I've really been focusing on, you sort of have these 
+two things, you have composite actions, which you can think of a composite 
+action.
 
-57 "Ryan Richard" (1149588992)
-00:19:42.889 --> 00:20:02.889
-And as reusing a task, what a task constitutes is really up to the developer, you could have a task B as something as fine grained as say just running a configuration script for like a C++ build or it could be the entire configure build install step.
+Ryan Richard: And as reusing a task, what a task constitutes is really up to 
+the developer, you could have a task B as something as fine grained as say just 
+running a configuration script for like a C++ build or it could be the entire 
+configure build install step.
 
-58 "Ryan Richard" (1149588992)
-00:20:02.889 --> 00:20:19.979
-Really up to you. And the other thing you have are reusable workflows, which reusable workflows are sort of drivers wrapped around the actions. So it's a series of actions run together, and you're reusing that series of commands.
+Ryan Richard: Really up to you. And the other thing you have are reusable 
+workflows, which reusable workflows are sort of drivers wrapped around the 
+actions. So it's a series of actions run together, and you're reusing that 
+series of commands.
 
-59 "Ryan Richard" (1149588992)
-00:20:19.979 --> 00:20:41.329
-It's suggested that you use one workflow per trigger condition, so you have a workflow for on pull requests, so when someone makes a pull request, you have one workflow for when someone pushes to your main or master branch, et cetera. Don't try to reuse the workflow.
+Ryan Richard: It's suggested that you use one workflow per trigger condition, so
+you have a workflow for on pull requests, so when someone makes a pull request, 
+you have one workflow for when someone pushes to your main or master branch, et 
+cetera. Don't try to reuse the workflow.
 
-60 "Ryan Richard" (1149588992)
-00:20:41.329 --> 00:21:00.359
-Goes across push across trigger conditions. More often than not, there's little differences. It's better to modularize the internals of the workflow than to try and put a bunch of if else logic through the workflow to make it so that it works under both trigger conditions.
+Ryan Richard: Goes across push across trigger conditions. More often than not, 
+there's little differences. It's better to modularize the internals of the 
+workflow than to try and put a bunch of if else logic through the workflow to 
+make it so that it works under both trigger conditions.
 
-61 "Ryan Richard" (1149588992)
-00:21:00.359 --> 00:21:15.599
-It's recommended you consider dedicated repositories for your composite actions. This is because GitHub tracks versioning on a per repo basis. In particular.
+Ryan Richard: It's recommended you consider dedicated repositories for your 
+composite actions. This is because GitHub tracks versioning on a per repo basis. 
+In particular.
 
 62 "Ryan Richard" (1149588992)
 00:21:15.599 --> 00:21:35.599
