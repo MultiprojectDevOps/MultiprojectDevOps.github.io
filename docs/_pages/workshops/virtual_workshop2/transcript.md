@@ -340,190 +340,227 @@ Ryan Richard: It's recommended you consider dedicated repositories for your
 composite actions. This is because GitHub tracks versioning on a per repo basis. 
 In particular.
 
-62 "Ryan Richard" (1149588992)
-00:21:15.599 --> 00:21:35.599
-You can or an alternative is to store them in the.github repo and just be very meticulous with your commits. And what I mean by this is if you only modify one composite action per commit, then your get versions will still essentially map to a single action. The problem is if.
+Ryan Richard: You can or an alternative is to store them in the.github repo and 
+just be very meticulous with your commits. And what I mean by this is if you 
+only modify one composite action per commit, then your get versions will still 
+essentially map to a single action. The problem is if.
 
-63 "Ryan Richard" (1149588992)
-00:21:35.599 --> 00:21:50.819
-You change multiple actions in one commit, then there's not really a good way to distinct distinguish whether you want to use say version one of action one and version two of action two since they both are tied to the same commit.
+Ryan Richard: You change multiple actions in one commit, then there's not 
+really a good way to distinct distinguish whether you want to use say version 
+one of action one and version two of action two since they both are tied to the 
+same commit.
 
-64 "Ryan Richard" (1149588992)
-00:21:50.819 --> 00:22:10.819
-Reusable workflows are meant to be used across an organization usually, so they are recommended that you put them in a single.github repo. Composite actions are usually thought of as being more general, more.
+Ryan Richard: Reusable workflows are meant to be used across an organization 
+usually, so they are recommended that you put them in a single.github repo. 
+Composite actions are usually thought of as being more general, more.
 
-65 "Ryan Richard" (1149588992)
-00:22:10.819 --> 00:22:38.189
-Useful outside the organization, that's why they were suggested as their own repos. If you have a lot of them though, yeah, it can be, there can be a trade off to that. And you should always be referring to the actions reusable workflows by version. So multi, so those best practices are a summary of the resources I've put together so far and the results of previous workshops et cetera.
+Ryan Richard: Useful outside the organization, that's why they were suggested as 
+their own repos. If you have a lot of them though, yeah, it can be, there can be 
+a trade off to that. And you should always be referring to the actions reusable 
+workflows by version. So multi, so those best practices are a summary of the 
+resources I've put together so far and the results of previous workshops et 
+cetera.
 
-66 "Ryan Richard" (1149588992)
-00:22:38.189 --> 00:22:58.189
-You can find the work on my endeavor into trying to figure out best practices for this on the multi project dev OPs website. There's some tutorials and resources there. There's the best practices and more importantly, if you really wanted, well, I don't know if it's more important, but there's also the extra.
+Ryan Richard: You can find the work on my endeavor into trying to figure out 
+best practices for this on the multi project dev OPs website. There's some 
+tutorials and resources there. There's the best practices and more importantly, 
+if you really wanted, well, I don't know if it's more important, but there's 
+also the extra.
 
-67 "Ryan Richard" (1149588992)
-00:22:58.189 --> 00:23:14.939
-Donations for how we came to those best practices. So they, most of them didn't just come out of thin air, there's actually logic behind why that's there. And I'll also put do a shout out to one of my colleagues. He put together a nice YouTube video explaining.
+Ryan Richard: Donations for how we came to those best practices. So they, most 
+of them didn't just come out of thin air, there's actually logic behind why 
+that's there. And I'll also put do a shout out to one of my colleagues. He put 
+together a nice YouTube video explaining.
 
-68 "Ryan Richard" (1149588992)
-00:23:14.939 --> 00:23:33.779
-How we came to our sort of multi project devops, or multi project CICD workflow, and that that video the link is available through the multi project website. So with that, sort of gonna summarize here some modularity.
+Ryan Richard: How we came to our sort of multi project devops, or multi project 
+CICD workflow, and that that video the link is available through the multi 
+project website. So with that, sort of gonna summarize here some modularity.
 
-69 "Ryan Richard" (1149588992)
-00:23:33.779 --> 00:23:53.779
-In my opinion really complicates the CICD workflows, if you want to apply dry, don't repeat yourself to CICD, then there's additional considerations. Github has made it a lot easier than when I started this endeavor. So when I started this endeavor.
+Ryan Richard: In my opinion really complicates the CICD workflows, if you want 
+to apply dry, don't repeat yourself to CICD, then there's additional 
+considerations. Github has made it a lot easier than when I started this 
+endeavor. So when I started this endeavor.
 
-70 "Ryan Richard" (1149588992)
-00:23:53.779 --> 00:24:08.849
-That wasn't as easy as it is now, thanks to github's reusable workflows, and composite actions. Reusable workflows are again sort of a driver and composite actions are really geared at reusable tasks. And I'm.
+Ryan Richard: That wasn't as easy as it is now, thanks to github's reusable 
+workflows, and composite actions. Reusable workflows are again sort of a driver 
+and composite actions are really geared at reusable tasks. And I'm.
 
-71 "Ryan Richard" (1149588992)
-00:24:08.849 --> 00:24:28.849
-Looking for collaborators to really flesh out more resources, maybe come up with some recipes for examples of composite actions or those kinds of things for the website or if somebody was interested in, e.g., repeating these processes for getlab so we could reach a better group of the science.
+Ryan Richard: Looking for collaborators to really flesh out more resources, 
+maybe come up with some recipes for examples of composite actions or those kinds 
+of things for the website or if somebody was interested in, e.g., repeating 
+these processes for getlab so we could reach a better group of the science.
 
-72 "Ryan Richard" (1149588992)
-00:24:28.849 --> 00:24:50.219
-Scientific or a larger group of the scientific software community. And with that, I acknowledge the people who funded this and helped work and I'm happy to answer any questions you might have.
+Ryan Richard: Scientific or a larger group of the scientific software community. 
+And with that, I acknowledge the people who funded this and helped work and I'm 
+happy to answer any questions you might have.
 
-73 "Ryan Richard" (1149588992)
-00:24:50.219 --> 00:25:06.209
-So I'm going to take the silence to be NO questions. So then let me ask, I guess.
+Ryan Richard: So I'm going to take the silence to be NO questions. So then let 
+me ask, I guess.
 
-74 "Ryan Richard" (1149588992)
-00:25:06.209 --> 00:25:26.209
-The people that are here, is there anyone that is a CICD maintainer and is facing similar problems?
+Ryan Richard: The people that are here, is there anyone that is a CICD 
+maintainer and is facing similar problems?
 
-75 "Ryan Richard" (1149588992)
-00:25:26.209 --> 00:25:30.061
-Oh, you're muted.
+Ryan Richard: Oh, you're muted.
 
-76 "David Swenson" (1803521024)
-00:25:30.061 --> 00:25:46.349
-There we go. I I sort of am. So I work for an organization where I'm sort of the infrastructure lead for, to help coordinate the infrastructure leads on other projects.
+David Swenson: There we go. I I sort of am. So I work for an organization where 
+I'm sort of the infrastructure lead for, to help coordinate the infrastructure 
+leads on other projects.
 
-77 "David Swenson" (1803521024)
-00:25:46.349 --> 00:26:05.039
-And we have several projects each, each of which is kind of an ecosystem, much like what you're talking about, where they may even have different kinds of plugins, very different plugins involved, and so in that sense, I'm I'm very interested in this. I don't think we've had as much of a pain point on it yet.
+David Swenson: And we have several projects each, each of which is kind of an 
+ecosystem, much like what you're talking about, where they may even have 
+different kinds of plugins, very different plugins involved, and so in that 
+sense, I'm I'm very interested in this. I don't think we've had as much of a 
+pain point on it yet.
 
-78 "David Swenson" (1803521024)
-00:26:05.039 --> 00:26:25.039
-And part of that is we're very Python focused. And so a lot of the the you know compilation issues, e.g., just aren't a thing for us and and making sure that's the same install or condo install is just very easy, but I've always been a little bit bothered in principle that we have different.
+David Swenson: And part of that is we're very Python focused. And so a lot of 
+the the you know compilation issues, e.g., just aren't a thing for us and and 
+making sure that's the same install or condo install is just very easy, but I've 
+always been a little bit bothered in principle that we have different.
 
-79 "David Swenson" (1803521024)
-00:26:25.039 --> 00:26:45.039
-CI workflows and when something happens like we follow the best practices around supporting versions of old versions of python. And so we move those on and and stop supporting old versions when that needs to happen. But that means that that has to happen through every project in the ecosystem and it takes a while for that to propagate cause people forget.
+David Swenson: CI workflows and when something happens like we follow the best 
+practices around supporting versions of old versions of python. And so we move 
+those on and and stop supporting old versions when that needs to happen. But 
+that means that that has to happen through every project in the ecosystem and it 
+takes a while for that to propagate cause people forget.
 
-80 "David Swenson" (1803521024)
-00:26:45.039 --> 00:27:00.557
-About some of the projects that we have with that we're still supporting. So yeah, we do that. We have we had some trouble with that, but it's not, it hasn't been enough of a pain point for us to need to really look at the, at the sort of centralized solution yet.
+David Swenson: About some of the projects that we have with that we're still 
+supporting. So yeah, we do that. We have we had some trouble with that, but it's 
+not, it hasn't been enough of a pain point for us to need to really look at the, 
+at the sort of centralized solution yet.
 
-81 "Ryan Richard" (1149588992)
-00:27:00.557 --> 00:27:17.209
-Alright, thanks for sharing. Anyone else? So I I guess I can add that, yeah, what you just said is very consistent.
+Ryan Richard: Alright, thanks for sharing. Anyone else? So I I guess I can add 
+that, yeah, what you just said is very consistent.
 
-82 "Ryan Richard" (1149588992)
-00:27:17.209 --> 00:27:41.399
-With some of the other things I've heard from people, that are working in Python ecosystems. They, they, they feel that, yeah. So I don't know if this is really just a comp yeah a compiled ecosystem thing because the other people that seem to be having this problem are four train developers, which again I think it's gonna be this for the same reasons the the build system just.
+Ryan Richard: With some of the other things I've heard from people, that are 
+working in Python ecosystems. They, they, they feel that, yeah. So I don't know 
+if this is really just a comp yeah a compiled ecosystem thing because the other 
+people that seem to be having this problem are four train developers, which 
+again I think it's gonna be this for the same reasons the the build system just.
 
-83 "Ryan Richard" (1149588992)
-00:27:41.399 --> 00:28:01.399
-Makes things a lot more complicated. I've also heard from a number of people that say when they switched over to Docker, these problems went away that the containerization just made the made it easier. So yeah, maybe these are just maybe this is a problem for the DOE software stack, so I'm department.
+Ryan Richard: Makes things a lot more complicated. I've also heard from a number
+ of people that say when they switched over to Docker, these problems went away 
+ that the containerization just made the made it easier. So yeah, maybe these 
+ are just maybe this is a problem for the DOE software stack, so I'm department.
 
-84 "Ryan Richard" (1149588992)
-00:28:01.399 --> 00:28:32.669
-Bit of energy, I should find my abbreviation there because we do have a lot of compiled software because we're targeting the exoscale machines and HPC in general. So yeah, what you said is very consistent with that. So my other questions then I guess are Is there other considerations that we I should be thinking about in terms of putting best practices together? Am I overlooking something?
+Ryan Richard: Bit of energy, I should find my abbreviation there because we do 
+have a lot of compiled software because we're targeting the exoscale machines 
+and HPC in general. So yeah, what you said is very consistent with that. So my 
+other questions then I guess are Is there other considerations that we I should 
+be thinking about in terms of putting best practices together? Am I overlooking 
+something?
 
-85 "David Swenson" (1803521024)
-00:28:44.779 --> 00:29:08.277
-So I don't know if I see overlooking, but there's a another perspective on this that is something I'm aware of it's not it's adjacent to my community, which is tooling that facilitates ensuring that plugins still work. Externally contributed plugins still work. And so especially since you're also in the chemistry space, you might be familiar with MDN out.
+David Swenson: So I don't know if I see overlooking, but there's a another 
+perspective on this that is something I'm aware of it's not it's adjacent to my 
+community, which is tooling that facilitates ensuring that plugins still work. 
+Externally contributed plugins still work. And so especially since you're also 
+in the chemistry space, you might be familiar with MDN out.
 
-86 "Ryan Richard" (1149588992)
-00:29:08.277 --> 00:29:09.679
-Process.
+Ryan Richard: Process.
 
-87 "David Swenson" (1803521024)
-00:29:09.679 --> 00:29:41.077
-And so they've recently basically they hit a point where they had too many, too many contributions coming into the core package. They didn't want to maintain it all. They wanted to keep some of those contributions external, and to facilitate that, they created what they called MDA kits. And that includes some CICD solutions where they actually are running the, the external contributions like against their canary builds so that they are warned if something changes and so they can also warn those downstream developers that they need to.
+David Swenson: And so they've recently basically they hit a point where they had
+too many, too many contributions coming into the core package. They didn't want
+to maintain it all. They wanted to keep some of those contributions external, 
+and to facilitate that, they created what they called MDA kits. And that 
+includes some CICD solutions where they actually are running the, the external 
+contributions like against their canary builds so that they are warned if 
+something changes and so they can also warn those downstream developers that 
+they need to.
 
-88 "David Swenson" (1803521024)
-00:29:41.719 --> 00:29:52.760
-Something. It's a, it has a lot in common with what you're talking about taking it from a very different perspective, but it might be something worth worth looking at and and considering what they're doing with that.
+David Swenson: Something. It's a, it has a lot in common with what you're 
+talking about taking it from a very different perspective, but it might be 
+something worth worth looking at and and considering what they're doing with 
+that.
 
-89 "Ryan Richard" (1149588992)
-00:29:52.760 --> 00:30:10.079
-Yeah, thanks for bringing that to my attention. Yeah, NO, this is definitely something our users have also expressed interest in. I hadn't really thought about it from this perspective of how they could be connected. But yeah, NO, this is definitely a problem we face also, you know, what happens when.
+Ryan Richard: Yeah, thanks for bringing that to my attention. Yeah, NO, this is 
+definitely something our users have also expressed interest in. I hadn't really 
+thought about it from this perspective of how they could be connected. But yeah, 
+NO, this is definitely a problem we face also, you know, what happens when.
 
-90 "Ryan Richard" (1149588992)
-00:30:10.079 --> 00:30:32.020
-One of the plugins changes and yeah, it breaks the ecosystem, it would be good to know ahead of time. So what we, for whatever, for what it's worth, we had been thinking of trying to roll out like common CICD for nightly builds, and so it wouldn't necessarily solve your problem, but you would know ahead of time, hey, you broke it.
+Ryan Richard: One of the plugins changes and yeah, it breaks the ecosystem, it 
+would be good to know ahead of time. So what we, for whatever, for what it's 
+worth, we had been thinking of trying to roll out like common CICD for nightly 
+builds, and so it wouldn't necessarily solve your problem, but you would know 
+ahead of time, hey, you broke it.
 
-91 "David Swenson" (1803521024)
-00:30:32.020 --> 00:31:04.178
-Yeah, the, the approach that the MD analysis people did, I think it's it's not the one I would have taken, but it seems to they're very happy with it so far, which is that they are the ones who are running the CICD so it's on the core product that they get the notification that the error is occurring. And so that's yeah to me that's a, that's a little bit different, but that is also, that's useful for knowing that you might have broken something downstream. Like you don't get that notification until the developer gets mad at you otherwise, right?
+David Swenson: Yeah, the, the approach that the MD analysis people did, I think 
+it's it's not the one I would have taken, but it seems to they're very happy 
+with it so far, which is that they are the ones who are running the CICD so it's 
+on the core product that they get the notification that the error is occurring. 
+And so that's yeah to me that's a, that's a little bit different, but that is 
+also, that's useful for knowing that you might have broken something downstream. 
+Like you don't get that notification until the developer gets mad at you 
+otherwise, right?
 
-92 "Ryan Richard" (1149588992)
-00:31:04.178 --> 00:31:11.975
-Yep, yeah. So it looks like it's just just yeah.
+Ryan Richard: Yep, yeah. So it looks like it's just just yeah.
 
-93 "David Swenson" (1803521024)
-00:31:11.975 --> 00:31:28.409
-Yeah if you start going very far down that sort of a road on that, please do get in touch with me because that's part of my current funding is to do some, some sort of things around this sort of plugin infrastructure thing. Okay. Our focus is on the idea that.
+David Swenson: Yeah if you start going very far down that sort of a road on 
+that, please do get in touch with me because that's part of my current funding 
+is to do some, some sort of things around this sort of plugin infrastructure 
+thing. Okay. Our focus is on the idea that.
 
-94 "David Swenson" (1803521024)
-00:31:28.409 --> 00:31:50.698
-We're trying to find ways to connect the developers of plugins to the user community. And so that's more about making a website that's like a centralized repository for any ecosystem, to, so that, you know, users can find plugins and plugin developers can get their users but the CI CD aspect of it is something I'm really interested in as well.
+David Swenson: We're trying to find ways to connect the developers of plugins 
+to the user community. And so that's more about making a website that's like a 
+centralized repository for any ecosystem, to, so that, you know, users can find 
+plugins and plugin developers can get their users but the CI CD aspect of it is 
+something I'm really interested in as well.
 
-95 "Ryan Richard" (1149588992)
-00:31:50.698 --> 00:31:55.921
-Cool. What's Do you have a website or something that I could.
+Ryan Richard: Cool. What's Do you have a website or something that I could.
 
-96 "David Swenson" (1803521024)
-00:31:55.921 --> 00:32:06.359
-We we don't have anything on that and not unfortunately our website is terrible, but it's OMSF.io, open Molecular software Foundation.
+David Swenson: We we don't have anything on that and not unfortunately our 
+website is terrible, but it's OMSF.io, open Molecular software Foundation.
 
-97 "David Swenson" (1803521024)
-00:32:06.359 --> 00:32:26.279
-And yeah, our website is currently, we're waiting for the new version of the website to finally get delivered. It's only a year late, you know? But once that's there because it's the other problem is I'm not even actually listed on that website, but my email is my 1st name, last name david.smart.
+David Swenson: And yeah, our website is currently, we're waiting for the new 
+version of the website to finally get delivered. It's only a year late, you 
+know? But once that's there because it's the other problem is I'm not even 
+actually listed on that website, but my email is my 1st name, last name 
+david.smart.
 
-98 "Ryan Richard" (1149588992)
-00:32:26.279 --> 00:32:30.239
-So feel free to get in touch if.
+Ryan Richard: So feel free to get in touch if.
 
-99 "Ryan Richard" (1149588992)
-00:32:30.239 --> 00:32:50.239
-Yeah, Sounds good. Yeah, I am hoping that I'm going to be moving back towards doing scientific software after this and away from the maintenance. Part of the reason I did this was because I was trying to bring awareness to the need for the software maintenance and I.
+Ryan Richard: Yeah, Sounds good. Yeah, I am hoping that I'm going to be moving 
+back towards doing scientific software after this and away from the maintenance. 
+Part of the reason I did this was because I was trying to bring awareness to the 
+need for the software maintenance and I.
 
-100 "Ryan Richard" (1149588992)
-00:32:50.239 --> 00:33:16.076
-Think that's resonated with some of the people around the lab, and so I'm hoping that I will actually get because I'm supposed to be doing quantum mechanics actually CICD. Yeah. So I'm optimistic that maybe I I will get to pivot, but I will definitely for if that does have regardless I will let people know about your interest and yeah, if we start moving in that direction, we'll be in touch.
+Ryan Richard: Think that's resonated with some of the people around the lab, 
+and so I'm hoping that I will actually get because I'm supposed to be doing 
+quantum mechanics actually CICD. Yeah. So I'm optimistic that maybe I I will 
+get to pivot, but I will definitely for if that does have regardless I will let 
+people know about your interest and yeah, if we start moving in that direction, 
+we'll be in touch.
 
-101 "David Swenson" (1803521024)
-00:33:16.076 --> 00:33:37.237
-Sounds good. Yeah, especially like if cause that's something where we're supposed to and I mean we are the open look at software foundation. We are supposed to help with open source software and and look at the sciences across the board. It's not just the things that we are hosted prod hosting our projects, so if if there's something that we can do that helps you guys as well, that's that's very much in our mission as a non profit.
+David Swenson: Sounds good. Yeah, especially like if cause that's something 
+where we're supposed to and I mean we are the open look at software foundation. 
+We are supposed to help with open source software and and look at the sciences 
+across the board. It's not just the things that we are hosted prod hosting our 
+projects, so if if there's something that we can do that helps you guys as well, 
+that's that's very much in our mission as a non profit.
 
-102 "Ryan Richard" (1149588992)
-00:33:37.237 --> 00:33:55.541
-But it's it's to do that. So yeah. Yeah, maybe there's actually, yeah, like a collaboration opportunity here. I don't know, I don't know what you usually do for funding, but DOE has NNSF have both been pretty supportive of partnering with the outside resources.
+Ryan Richard: But it's it's to do that. So yeah. Yeah, maybe there's actually, 
+yeah, like a collaboration opportunity here. I don't know, I don't know what you 
+usually do for funding, but DOE has NNSF have both been pretty supportive of 
+partnering with the outside resources.
 
-103 "David Swenson" (1803521024)
-00:33:55.541 --> 00:34:25.398
-Yeah, right now, right now I'm on an NSF post grant. Most of our organization, we're more on the classical micro dynamic side of things and it's all the near bio side of things. So force field development, free energy calculations and protein structure prediction, all of which are easily funded by pharma. We get a lot that's where most of our money comes from. We are the open source alternative to the expensive thing that they pay for.
+David Swenson: Yeah, right now, right now I'm on an NSF post grant. Most of our 
+organization, we're more on the classical micro dynamic side of things and it's 
+all the near bio side of things. So force field development, free energy 
+calculations and protein structure prediction, all of which are easily funded 
+by pharma. We get a lot that's where most of our money comes from. We are the 
+open source alternative to the expensive thing that they pay for.
 
-104 "Ryan Richard" (1149588992)
-00:34:25.398 --> 00:34:44.456
-Gotcha, yeah. Yeah, unfortunately I I'm the very low level electronic structure by training and yeah, it's a hard time convincing them that they need a supercomputer to compute the energy of two atom systems. Ignore me.
+Ryan Richard: Gotcha, yeah. Yeah, unfortunately I I'm the very low level 
+electronic structure by training and yeah, it's a hard time convincing them 
+that they need a supercomputer to compute the energy of two atom systems. 
+Ignore me.
 
-105 "David Swenson" (1803521024)
-00:34:44.456 --> 00:34:53.677
-Yeah, NO, that's where I started out before I went to even less useful stuff with semi classical dynamics, which is really ripthless, but yeah so.
+David Swenson: Yeah, NO, that's where I started out before I went to even less 
+useful stuff with semi classical dynamics, which is really ripthless, but yeah 
+so.
 
-106 "Ryan Richard" (1149588992)
-00:34:53.677 --> 00:34:58.998
-Alright, well it was good to meet you unless you have anything else.
+Ryan Richard: Alright, well it was good to meet you unless you have anything else.
 
-107 "David Swenson" (1803521024)
-00:34:58.998 --> 00:35:06.678
-I don't I've been interested in seeing I've been interested seeing where it goes and and i'll continue to keep an eye out on this so thanks for doing the work on that.
+David Swenson: I don't I've been interested in seeing I've been interested 
+seeing where it goes and and i'll continue to keep an eye out on this so thanks 
+for doing the work on that.
 
-108 "Ryan Richard" (1149588992)
-00:35:06.678 --> 00:35:10.919
-Alright, thanks for coming. Bye. Bye.
+Ryan Richard: Alright, thanks for coming. Bye. Bye.
