@@ -6,6 +6,7 @@ docs/_site
 venv/
 
 Gemfile.lock
+.DS_Store
 
 # LaTeX auxiliary files
 cv.aux
