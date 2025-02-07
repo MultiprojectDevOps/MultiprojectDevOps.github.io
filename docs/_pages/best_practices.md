@@ -31,20 +31,19 @@ IaC brings a number of advantages including:
 - *Security*. You know that deployment happens within your constraints., and
 - *Reproducibility*. Others can use the code to get the same environment.
 
-## 1.2 Treat Code as Code (CaC)
+## 1.2 Unify Dependency Management
 
-**Practice:** All code --- be it the main software product, or the scripts
-written to maintain that product --- should be developed following best
-practices. In particular, we call out the scripts and pipelines powering CI/CD.
+**Practice** Prefer the use of bona fide dependency management solutions across
+CI/CD pipelines. This is as opposed to ad hoc installing dependencies as a step
+in a CI/CD pipeline.
 
-**Explanation:** Particularly when developing scientific software, there is a
-propensity to treat supporting software (such as the scripts used for CI/CD)
-as less important than the main software product. While it is tempting to
-rebrand the supporting software as "infrastructure" and consolidate this best
-practice with the previous IaC best practice, the term IaC is usually reserved
-for the environment the software will run in and the hardware it will run on.
-Hence the need for a new term. CaC is a reminder that best practices benefit all
-software, not just the primary software product.
+**Explanation:** Dependency management is a challenging issue on its own. When
+coupled to multiple CI/CD pipelines the issue becomes worse. More specifically,
+if a component's dependency needs change, the rest of the ecosystem should be
+cognizant of this change, even if the components do not directly depend on
+each other. This is because the components will need to coexist, and if the
+components can not agree on what versions,features, etc. of common dependencies
+are needed, then coexistance is difficult. 
 
 ## 1.3 Don't Repeat Yourself (DRY)
 
@@ -61,6 +60,31 @@ pipeline is modified or updated, the changes must manually be applied to all
 copies. This is often an error-prone task as it is easy to forget to propagate
 changes or to miss a copy. Furthermore, find-and-replace may not work if the
 lines in question have been modified with project-specific information.
+
+## 1.4 Develop Reusable Pipeline Components
+
+**Practice:** Once identified, common pipeline components should be developed
+following usual software best practices. 
+
+**Explanation:** While it is tempting to rebrand the supporting software as 
+"infrastructure" and consolidate this best practice with the IaC best practice, 
+the term IaC is usually reserved for the environment the software will run in 
+and the hardware it will run on. Similarly, some readers may wonder why there 
+is a need to explicitly state this practice. However, particularly in the 
+context of developing scientific software, there is a propensity to treat 
+supporting software (such as the scripts used for CI/CD) as less important than 
+the main software product.
+
+## 1.5 Security
+
+**Practice:** Only use reusable components you trust. Think carefully about
+pipeline permissions.
+
+**Explanation:** While there are always security concerns any time two pieces
+of software are coupled, the fact that CI/CD is usually run with elevated 
+permissions makes it easier for reusable components to be extra destructive. We 
+are not security experts, so consider this practice a reminder that code reuse 
+can have security ramifications.
 
 # 2. GitHub Actions
 
